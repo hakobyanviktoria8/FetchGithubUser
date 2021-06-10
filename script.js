@@ -2,7 +2,7 @@
     let url = 'https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits';
     let response = await fetch(url);
     let commits = await response.json();
-
+    console.log(commits);
     for (let user of commits){
         let avatar = user.author.avatar_url;
         let name = user.commit.author.name;
